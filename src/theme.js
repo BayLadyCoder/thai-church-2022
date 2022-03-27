@@ -1,0 +1,31 @@
+import { createTheme } from "@mui/material/styles";
+import {
+  purple,
+  red,
+  blue,
+  lightBlue,
+  lime,
+  pink,
+  teal,
+  indigo,
+  deepPurple,
+  grey,
+} from "@mui/material/colors";
+export const theme = createTheme({
+  palette: {
+    primary: {
+      light: "#e5baf5",
+      main: "#824999",
+      dark: "#002884",
+      text: "#f5f5f5",
+      white: "#ffffff",
+      black: "#111111",
+    },
+    secondary: {
+      light: "#72ddc2",
+      main: "#29967b",
+      dark: "#22856c",
+      contrastText: "#000",
+    },
+  },
+});
