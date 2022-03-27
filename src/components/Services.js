@@ -8,7 +8,7 @@ const boxStyles = {
   width: "45%",
   minWidth: "260px",
   maxWidth: "350px",
-  margin: "40px 20px",
+  margin: "40px 20px 10px 20px",
   padding: "25px 0",
   height: "250px",
   display: "flex",
