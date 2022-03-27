@@ -3,6 +3,7 @@ import "./app.css";
 import NavBar from "./components/NavBar";
 import Carousel from "./components/Carousel";
 import Services from "./components/Services";
+import About from "./components/About";
 import { theme } from "./theme";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
         <NavBar />
         <Carousel />
         <Services />
+        <About />
       </div>
     </ThemeProvider>
   );
