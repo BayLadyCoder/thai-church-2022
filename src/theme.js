@@ -14,9 +14,9 @@ import {
 export const theme = createTheme({
   palette: {
     primary: {
-      light: "#e5baf5",
+      light: "#d1b3dd",
       main: "#824999",
-      dark: "#002884",
+      dark: "#6b3880",
       text: "#f5f5f5",
       white: "#ffffff",
       black: "#111111",
@@ -27,5 +27,8 @@ export const theme = createTheme({
       dark: "#22856c",
       contrastText: "#000",
     },
+  },
+  typography: {
+    fontFamily: ["DM Sans, sans-serif"],
   },
 });
