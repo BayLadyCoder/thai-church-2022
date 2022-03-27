@@ -1,14 +1,11 @@
 import { useState, useEffect } from "react";
-import { Paper, IconButton, Container, Typography } from "@mui/material";
+import { IconButton, Container, Typography } from "@mui/material";
 import "./carousel.css";
-import {
-  imagesWithDetails,
-  totalImageWithDetails,
-} from "../media/carouselPhotos/";
+import { imagesDetails } from "../media/carouselPhotos/";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
-const lastSlide = totalImageWithDetails - 1;
+const lastSlide = imagesDetails.length - 1;
 
 const Carousel = (props) => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -41,7 +38,7 @@ const Carousel = (props) => {
     });
   };
   console.log("currentSlide", currentSlide);
-  console.log("imagesWithDetails", imagesWithDetails);
+  console.log("imagesDetails", imagesDetails);
   return (
     <>
       <div className="carousel">
@@ -53,20 +50,16 @@ const Carousel = (props) => {
         >
           <ArrowBackIosNewIcon fontSize="large" />
         </IconButton>
-        {/* <img
-          className="carousel-img"
-          src={imagesWithDetails[currentSlide].img}
-          alt={imagesWithDetails[currentSlide].alt}
-        /> */}
+
         <div className="carousel-items">
           <div className="carousel-img" id={`img${currentSlide + 1}`}></div>
         </div>
         <div className="carousel-overlay">
           <Typography variant="h3">
-            {imagesWithDetails[currentSlide].header}
+            {imagesDetails[currentSlide].header}
           </Typography>
           <Typography variant="h5">
-            {imagesWithDetails[currentSlide].description}
+            {imagesDetails[currentSlide].description}
           </Typography>
         </div>
         <IconButton
@@ -81,10 +74,5 @@ const Carousel = (props) => {
     </>
   );
 };
-
-function Image(props) {
-  console.log("props", props);
-  return <img className="carousel-img" src={props.item.img} alt={props.alt} />;
-}
 
 export default Carousel;
