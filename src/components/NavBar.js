@@ -12,14 +12,15 @@ import MenuItem from "@mui/material/MenuItem";
 import { theme } from "../theme";
 
 const pages = [
-  "Home",
-  "Services",
-  "About",
-  "Mission",
-  "Events",
-  "Contact",
-  "Give",
+  { name: "Home", link: "/" },
+  { name: "Services", link: "#services" },
+  { name: "About", link: "#about" },
+  { name: "Missions", link: "#missions" },
+  { name: "Events", link: "#events" },
+  { name: "Contact", link: "/contact" },
+  { name: "Give", link: "/give" },
 ];
+
 const LOGO = "Thai Christian Church DC";
 
 const NavBar = () => {
@@ -59,23 +60,23 @@ const NavBar = () => {
               alignItems: "center",
             }}
           >
-            {pages.map((page, index) =>
+            {pages.map(({ name, link }, index) =>
               index < pages.length - 1 ? (
                 <Button
                   className="nav-link"
-                  key={page}
+                  key={name}
                   onClick={handleCloseNavMenu}
                   sx={{
                     color: theme.palette.primary.text,
                     fontWeight: "bold",
                   }}
-                  href={`#${page}`}
+                  href={`${link}`}
                 >
-                  {page}
+                  {name}
                 </Button>
               ) : (
                 <Button
-                  key={page}
+                  key={name}
                   onClick={handleCloseNavMenu}
                   sx={{
                     color: theme.palette.primary.white,
@@ -86,11 +87,11 @@ const NavBar = () => {
                     padding: "0 10px",
                     height: "30px",
                   }}
-                  href={`#${page}`}
+                  href={`${link}`}
                   variant="contained"
                   color="secondary"
                 >
-                  {page}
+                  {name}
                 </Button>
               )
             )}
@@ -133,8 +134,16 @@ const NavBar = () => {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                <MenuItem key={page.name} onClick={handleCloseNavMenu}>
+                  <Button
+                    textAlign="center"
+                    href={page.link}
+                    sx={{
+                      color: theme.palette.primary.black,
+                    }}
+                  >
+                    {page.name}
+                  </Button>
                 </MenuItem>
               ))}
             </Menu>

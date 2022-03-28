@@ -6,6 +6,7 @@ import { theme } from "../theme";
 const About = () => {
   return (
     <div
+      id="about"
       style={{
         padding: "50px 18% 60px 18%",
         display: "flex",

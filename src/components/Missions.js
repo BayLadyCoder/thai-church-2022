@@ -14,7 +14,7 @@ const boxStyles = {
 const Missions = (props) => {
   return (
     <Container
-      align="center"
+      id="missions"
       sx={{
         margin: "50px 20%",
         display: "flex",

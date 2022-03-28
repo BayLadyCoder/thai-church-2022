@@ -20,6 +20,7 @@ const boxStyles = {
 const Services = (props) => {
   return (
     <Container
+      id="services"
       align="center"
       sx={{
         padding: "50px 0",
