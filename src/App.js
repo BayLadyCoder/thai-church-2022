@@ -4,6 +4,7 @@ import NavBar from "./components/NavBar";
 import Carousel from "./components/Carousel";
 import Services from "./components/Services";
 import About from "./components/About";
+import Missions from "./components/Missions";
 import { theme } from "./theme";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Carousel />
         <Services />
         <About />
+        <Missions />
       </div>
     </ThemeProvider>
   );
