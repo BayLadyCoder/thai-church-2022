@@ -5,6 +5,7 @@ import Carousel from "./components/Carousel";
 import Services from "./components/Services";
 import About from "./components/About";
 import Missions from "./components/Missions";
+import Footer from "./components/Footer";
 import { theme } from "./theme";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Services />
         <About />
         <Missions />
+        <Footer />
       </div>
     </ThemeProvider>
   );
