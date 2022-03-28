@@ -16,11 +16,12 @@ export const theme = createTheme({
     primary: {
       light: "#e2c3ed",
       main: "#824999",
-      dark: "#6c648b",
+      grey: "#a2a2a2",
+      darkGrey: "#444444",
       dark: "#6b3880",
       text: "#f5f5f5",
       white: "#ffffff",
-      black: "#151515",
+      black: "#2e2e2e",
     },
     secondary: {
       bright: "#2fa78b",

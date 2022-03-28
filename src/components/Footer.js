@@ -16,6 +16,7 @@ const boxStyles = {
 const Footer = (props) => {
   return (
     <div
+      id="footer"
       style={{
         width: "100vw",
         padding: "20px 0",
@@ -23,7 +24,7 @@ const Footer = (props) => {
         justifyContent: "center",
         alignItems: "center",
         flexDirection: "column",
-        backgroundColor: "#282828",
+        backgroundColor: theme.palette.primary.black,
         color: theme.palette.primary.text,
       }}
     >

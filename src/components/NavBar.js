@@ -16,8 +16,12 @@ const pages = [
   { name: "Services", link: "#services", target: "_self" },
   { name: "About", link: "#about", target: "_self" },
   { name: "Missions", link: "#missions", target: "_self" },
-  { name: "Events", link: "#events", target: "_self" },
-  { name: "Contact", link: "/contact", target: "_self" },
+  {
+    name: "Events",
+    link: "https://www.facebook.com/groups/thaichurchdc/events",
+    target: "_blank",
+  },
+  { name: "Contact", link: "#footer", target: "_self" },
   {
     name: "Give",
     link: "https://www.facebook.com/donate/489870772734048/10151866592844990/",
@@ -142,7 +146,6 @@ const NavBar = () => {
               {pages.map((page) => (
                 <MenuItem key={page.name} onClick={handleCloseNavMenu}>
                   <Button
-                    textAlign="center"
                     target={page.target}
                     href={page.link}
                     sx={{

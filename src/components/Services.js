@@ -1,6 +1,7 @@
 import { Container, Typography, Box, Button } from "@mui/material";
-import PinDropIcon from "@mui/icons-material/PinDrop";
 import VideocamIcon from "@mui/icons-material/Videocam";
+import PlaceIcon from "@mui/icons-material/Place";
+
 import { theme } from "../theme";
 
 const boxStyles = {
@@ -45,7 +46,7 @@ const Services = (props) => {
         sx={{
           fontSize: "17px",
           marginTop: "15px",
-          color: theme.palette.primary.main,
+          color: theme.palette.secondary.main,
         }}
       >
         Worship Service: Every Sunday at 11.30am (Eastern Time)
@@ -59,16 +60,21 @@ const Services = (props) => {
         }}
       >
         <Box sx={boxStyles}>
-          <PinDropIcon fontSize="large" color="secondary" />
+          <PlaceIcon fontSize="large" color="secondary" />
           <Typography
             sx={{
               fontWeight: "bold",
               margin: "10px 0 20px 0",
+              color: theme.palette.primary.black,
             }}
           >
             Worship in Person
           </Typography>
-          <Typography>
+          <Typography
+            sx={{
+              color: theme.palette.primary.black,
+            }}
+          >
             Thai Church DC <br />
             3910 Lorcom Lane, Arlington <br />
             Virginia 22207
@@ -80,6 +86,7 @@ const Services = (props) => {
             sx={{
               fontWeight: "bold",
               margin: "10px 0 20px 0",
+              color: theme.palette.primary.black,
             }}
           >
             Worship Live on Facebook
@@ -87,6 +94,7 @@ const Services = (props) => {
           <Typography
             sx={{
               marginBottom: "20px",
+              color: theme.palette.primary.black,
             }}
           >
             Thai Church DC Facebook Page
