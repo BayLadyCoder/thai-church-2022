@@ -56,6 +56,8 @@ const NavBar = () => {
             sx={{
               color: theme.palette.primary.light,
               fontWeight: "bold",
+              fontFamily: "Roboto Slab, serif",
+              textShadow: `-1px 0 ${theme.palette.primary.logoShadow}, 0 1px ${theme.palette.primary.logoShadow}, 1px 0 ${theme.palette.primary.logoShadow}, 0 -1px ${theme.palette.primary.logoShadow}`,
             }}
           >
             {LOGO}

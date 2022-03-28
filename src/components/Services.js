@@ -5,7 +5,7 @@ import PlaceIcon from "@mui/icons-material/Place";
 import { theme } from "../theme";
 
 const boxStyles = {
-  border: "1px black solid",
+  border: `1px ${theme.palette.primary.grey} solid`,
   width: "45%",
   minWidth: "260px",
   maxWidth: "350px",
@@ -60,12 +60,17 @@ const Services = (props) => {
         }}
       >
         <Box sx={boxStyles}>
-          <PlaceIcon fontSize="large" color="secondary" />
+          <PlaceIcon
+            color="secondary"
+            sx={{ fontSize: "50px", color: theme.palette.secondary.bright }}
+          />
           <Typography
             sx={{
               fontWeight: "bold",
-              margin: "10px 0 20px 0",
+              margin: "10px 0",
+              fontSize: "19px",
               color: theme.palette.primary.black,
+              fontFamily: "Roboto Slab, serif",
             }}
           >
             Worship in Person
@@ -81,12 +86,17 @@ const Services = (props) => {
           </Typography>
         </Box>
         <Box sx={boxStyles}>
-          <VideocamIcon fontSize="large" color="secondary" />
+          <VideocamIcon
+            color="secondary"
+            sx={{ fontSize: "50px", color: theme.palette.secondary.bright }}
+          />
           <Typography
             sx={{
               fontWeight: "bold",
-              margin: "10px 0 20px 0",
+              fontSize: "19px",
+              margin: "10px 0 ",
               color: theme.palette.primary.black,
+              fontFamily: "Roboto Slab, serif",
             }}
           >
             Worship Live on Facebook
