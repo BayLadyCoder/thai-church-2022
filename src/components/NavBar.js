@@ -12,13 +12,17 @@ import MenuItem from "@mui/material/MenuItem";
 import { theme } from "../theme";
 
 const pages = [
-  { name: "Home", link: "/" },
-  { name: "Services", link: "#services" },
-  { name: "About", link: "#about" },
-  { name: "Missions", link: "#missions" },
-  { name: "Events", link: "#events" },
-  { name: "Contact", link: "/contact" },
-  { name: "Give", link: "/give" },
+  { name: "Home", link: "/", target: "_self" },
+  { name: "Services", link: "#services", target: "_self" },
+  { name: "About", link: "#about", target: "_self" },
+  { name: "Missions", link: "#missions", target: "_self" },
+  { name: "Events", link: "#events", target: "_self" },
+  { name: "Contact", link: "/contact", target: "_self" },
+  {
+    name: "Give",
+    link: "https://www.facebook.com/donate/489870772734048/10151866592844990/",
+    target: "_blank",
+  },
 ];
 
 const LOGO = "Thai Christian Church DC";
@@ -60,7 +64,7 @@ const NavBar = () => {
               alignItems: "center",
             }}
           >
-            {pages.map(({ name, link }, index) =>
+            {pages.map(({ name, link, target }, index) =>
               index < pages.length - 1 ? (
                 <Button
                   className="nav-link"
@@ -70,6 +74,7 @@ const NavBar = () => {
                     color: theme.palette.primary.text,
                     fontWeight: "bold",
                   }}
+                  target={target}
                   href={`${link}`}
                 >
                   {name}
@@ -87,6 +92,7 @@ const NavBar = () => {
                     padding: "0 10px",
                     height: "30px",
                   }}
+                  target={target}
                   href={`${link}`}
                   variant="contained"
                   color="secondary"
@@ -137,6 +143,7 @@ const NavBar = () => {
                 <MenuItem key={page.name} onClick={handleCloseNavMenu}>
                   <Button
                     textAlign="center"
+                    target={page.target}
                     href={page.link}
                     sx={{
                       color: theme.palette.primary.black,
