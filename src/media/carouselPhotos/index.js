@@ -6,7 +6,7 @@ export const imagesDetails = [
   },
   {
     alt: "Worship Jesus",
-    header: "Sunday Service: 11am (ET)",
+    header: "Sunday Service: 11:30 am (ET)",
     description: "3910 Lorcom Lane, Arlington, Virginia 22207",
   },
   {

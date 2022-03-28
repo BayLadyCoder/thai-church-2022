@@ -37,8 +37,7 @@ const Carousel = (props) => {
       }
     });
   };
-  console.log("currentSlide", currentSlide);
-  console.log("imagesDetails", imagesDetails);
+
   return (
     <>
       <div className="carousel">
