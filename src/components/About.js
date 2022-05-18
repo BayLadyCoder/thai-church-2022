@@ -30,15 +30,23 @@ const About = () => {
         About
       </Typography>
       <Container
-        style={{
+        sx={{
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
+          flexDirection: {
+            xs: "column",
+            lg: "row",
+          },
         }}
       >
         <Typography
           variant="subtitle1"
-          sx={{ textAlign: "justify", fontSize: "17px" }}
+          sx={{
+            textAlign: "justify",
+            fontSize: "17px",
+            marginBottom: { sm: "20px", lg: "0" },
+          }}
         >
           <strong>Thai Christian Church Washington DC (TCCDC)</strong> is the
           church for our family to come and enjoy our blessing time from God our
