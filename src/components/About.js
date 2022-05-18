@@ -45,7 +45,7 @@ const About = () => {
           sx={{
             textAlign: "justify",
             fontSize: "17px",
-            marginBottom: { sm: "20px", lg: "0" },
+            marginBottom: { xs: "20px", lg: "0" },
           }}
         >
           <strong>Thai Christian Church Washington DC (TCCDC)</strong> is the
