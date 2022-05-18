@@ -53,11 +53,14 @@ const Carousel = (props) => {
         <div className="carousel-items">
           <div className="carousel-img" id={`img${currentSlide + 1}`}></div>
         </div>
-        <div className="carousel-overlay">
-          <Typography variant="h3">
+        <div className="carousel-overlay" style={{ padding: "0 20px" }}>
+          <Typography
+            variant="h3"
+            sx={{ textAlign: "center", marginBottom: "10px" }}
+          >
             {imagesDetails[currentSlide].header}
           </Typography>
-          <Typography variant="h5">
+          <Typography variant="h5" sx={{ textAlign: "center" }}>
             {imagesDetails[currentSlide].description}
           </Typography>
         </div>

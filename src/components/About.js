@@ -1,14 +1,15 @@
 import React from "react";
-import { Typography, Container } from "@mui/material";
+import { Typography, Container, Box } from "@mui/material";
 import collection from "../media/about/collectionCircle.png";
 import { theme } from "../theme";
 
 const About = () => {
   return (
-    <div
+    <Box
       id="about"
-      style={{
-        padding: "50px 18% 60px 18%",
+      sx={{
+        width: "100%",
+        padding: { xs: "50px 5% 60px 5%", md: "50px 15% 60px 15%" },
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
@@ -46,6 +47,7 @@ const About = () => {
             textAlign: "justify",
             fontSize: "17px",
             marginBottom: { xs: "20px", lg: "0" },
+            marginRight: { xs: "0", lg: "40px" },
           }}
         >
           <strong>Thai Christian Church Washington DC (TCCDC)</strong> is the
@@ -68,10 +70,10 @@ const About = () => {
         <img
           src={collection}
           alt=""
-          style={{ width: "400px", borderRadius: "50%", marginLeft: "40px" }}
+          style={{ width: "300px", borderRadius: "50%" }}
         />
       </Container>
-    </div>
+    </Box>
   );
 };
 

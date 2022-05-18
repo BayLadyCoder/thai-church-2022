@@ -10,6 +10,7 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import { theme } from "../theme";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const pages = [
   { name: "Home", link: "/", target: "_self" },
@@ -29,7 +30,8 @@ const pages = [
   },
 ];
 
-const LOGO = "Thai Christian Church DC";
+const fullName = "Thai Christian Church DC";
+const shortName = "TCCDC";
 
 const NavBar = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);
@@ -41,6 +43,8 @@ const NavBar = () => {
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
+
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
     <AppBar
@@ -60,8 +64,9 @@ const NavBar = () => {
               textShadow: `-1px 0 ${theme.palette.primary.logoShadow}, 0 1px ${theme.palette.primary.logoShadow}, 1px 0 ${theme.palette.primary.logoShadow}, 0 -1px ${theme.palette.primary.logoShadow}`,
             }}
           >
-            {LOGO}
+            {isMobile ? shortName : fullName}
           </Typography>
+
           <Box
             sx={{
               flexGrow: 1,

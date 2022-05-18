@@ -31,6 +31,7 @@ const Missions = () => {
           fontSize: "17px",
           margin: "15px 0",
           color: theme.palette.secondary.main,
+          textAlign: "center",
         }}
       >
         จุดมุ่งหมายของคริสตจักรไทย (Mission Statement)
@@ -62,7 +63,7 @@ const Missions = () => {
             alignItems: "flex-start",
             justifyContent: "center",
             height: { xs: "auto", md: "100%" },
-            width: { xs: "70%", sm: "50%", md: "100%" },
+            width: { xs: "90%", sm: "50%", md: "100%" },
             marginLeft: { xs: "0px", md: "50px" },
             marginTop: { xs: "25px", md: "0" },
           }}
