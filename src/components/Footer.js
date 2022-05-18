@@ -9,13 +9,13 @@ const boxStyles = {
   padding: "25px 0",
   display: "flex",
   flexDirection: "column",
-  alignItems: "flex-start",
-  justifyContent: "flex-start",
+  alignItems: { xs: "center", md: "flex-start" },
+  justifyContent: { xs: "center", md: "flex-start" },
 };
 
 const Footer = (props) => {
   return (
-    <div
+    <Box
       id="footer"
       style={{
         width: "100vw",
@@ -32,7 +32,9 @@ const Footer = (props) => {
         align="center"
         sx={{
           display: "flex",
-          justifyContent: "space-between",
+          justifyContent: { xs: "center", md: "space-between" },
+          alignItems: { xs: "center", md: "flex-start" },
+          flexDirection: { xs: "column", md: "row" },
         }}
       >
         <Box sx={boxStyles}>
@@ -60,7 +62,7 @@ const Footer = (props) => {
           <Typography
             sx={{
               marginBottom: "20px",
-              textAlign: "left",
+              textAlign: { xs: "center", md: "left" },
             }}
           >
             In Person at Thai Church DC <br />
@@ -99,7 +101,7 @@ const Footer = (props) => {
           <Typography
             sx={{
               marginBottom: "10px",
-              textAlign: "left",
+              textAlign: { xs: "center", md: "left" },
             }}
           >
             Thai Church DC <br /> 3910 Lorcom Lane Arlington, VA 22207.
@@ -107,7 +109,7 @@ const Footer = (props) => {
           <Typography
             sx={{
               marginBottom: "10px",
-              textAlign: "left",
+              textAlign: { xs: "center", md: "left" },
             }}
           >
             thaichurchdc@yahoo.com
@@ -121,7 +123,13 @@ const Footer = (props) => {
             +1 240-353-4884
           </Typography>
         </Box>
-        <Box sx={boxStyles}>
+        <Box
+          sx={{
+            ...boxStyles,
+            alignItems: { xs: "center", lg: "flex-start" },
+            justifyContent: { xs: "center", lg: "flex-start" },
+          }}
+        >
           <Typography
             variant="h2"
             sx={{
@@ -159,7 +167,7 @@ const Footer = (props) => {
       >
         Thai Christian Church Washington DC Ⓒ 2022
       </Typography>
-    </div>
+    </Box>
   );
 };
 
