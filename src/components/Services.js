@@ -1,13 +1,12 @@
 import { Container, Typography, Box, Button } from "@mui/material";
 import VideocamIcon from "@mui/icons-material/Videocam";
 import PlaceIcon from "@mui/icons-material/Place";
-
 import { theme } from "../theme";
 
 const boxStyles = {
   border: `1px ${theme.palette.primary.grey} solid`,
   width: "45%",
-  minWidth: "260px",
+  minWidth: "310px",
   maxWidth: "350px",
   margin: "40px 20px 10px 20px",
   padding: "25px 0",
@@ -56,7 +55,14 @@ const Services = (props) => {
         sx={{
           display: "flex",
           justifyContent: "center",
-          alignItems: "flex-start",
+          alignItems: {
+            xs: "center",
+            md: "flex-start",
+          },
+          flexDirection: {
+            xs: "column",
+            md: "row",
+          },
         }}
       >
         <Box sx={boxStyles}>
