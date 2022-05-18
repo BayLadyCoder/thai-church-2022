@@ -4,11 +4,12 @@ import PlaceIcon from "@mui/icons-material/Place";
 import { theme } from "../theme";
 
 const boxStyles = {
-  margin: "0 20px",
+  margin: { xs: "20px 0 0px 0", lg: "0 20px" },
   display: "flex",
   flexDirection: "column",
-  alignItems: "flex-start",
-  justifyContent: "flex-start",
+  width: { xs: "90%", sm: "80%", md: "70%", lg: "auto" },
+  alignItems: { xs: "center", lg: "flex-start" },
+  justifyContent: { xs: "center", lg: "flex-start" },
 };
 
 const Event = ({ event }) => {
@@ -17,16 +18,17 @@ const Event = ({ event }) => {
   return (
     <Container
       id="events"
-      style={{
+      sx={{
         border: "1px #d5d5d5 solid",
         borderRadius: "10px",
-        width: "60%",
-        padding: "20px",
+        width: { xs: "90%", sm: "80%", md: "70%", lg: "60%" },
+        padding: { xs: "30px 0", lg: "20px" },
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
         backgroundColor: theme.palette.primary.white,
         marginBottom: "10px",
+        flexDirection: { xs: "column", lg: "row" },
       }}
     >
       <img
@@ -40,7 +42,7 @@ const Event = ({ event }) => {
             fontSize: "22px",
             fontWeight: "bold",
             fontFamily: "Roboto Slab, serif",
-            textAlign: "left",
+            textAlign: { xs: "center", lg: "left" },
             color: theme.palette.primary.black,
           }}
         >

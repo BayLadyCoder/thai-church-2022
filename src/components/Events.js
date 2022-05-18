@@ -9,7 +9,7 @@ const Events = (props) => {
     {
       title: "Thai Church DC Easter",
       dateTime: "SUNDAY, APRIL 17, 2022 AT 11:30 PM",
-      location: "Thai Church DC -  3910 Lorcom Lane Arlington, VA 22207.",
+      location: "Thai Church DC -  3910 Lorcom Lane Arlington, VA.",
       image: Easter2022Img,
       link: "https://fb.me/e/5eiIhBb8r",
       detail:
@@ -18,7 +18,7 @@ const Events = (props) => {
     {
       title: "คริสต์มาสคนเมือง Northern Thai Christmas",
       dateTime: "SUNDAY, DECEMBER 19, 2021 AT 11:30 AM",
-      location: "Thai Church DC -  3910 Lorcom Lane Arlington, VA 22207.",
+      location: "Thai Church DC -  3910 Lorcom Lane Arlington, VA.",
 
       image: NorthernThaiChristmasImg,
       link: "https://fb.me/e/4iKHhnNju",
