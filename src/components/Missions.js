@@ -1,17 +1,9 @@
 import React from "react";
-import { Container, Typography } from "@mui/material";
+import { Container, Typography, Box } from "@mui/material";
 import { theme } from "../theme";
 import cross from "../media/mission/cross.jpeg";
 
-const boxStyles = {
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "flex-start",
-  justifyContent: "center",
-  height: "100%",
-};
-
-const Missions = (props) => {
+const Missions = () => {
   return (
     <Container
       id="missions"
@@ -49,18 +41,32 @@ const Missions = (props) => {
           justifyContent: "center",
           alignItems: "center",
           margin: "20px 0 10px 0",
+          flexDirection: {
+            xs: "column",
+            md: "row",
+          },
         }}
       >
         <img
           src={cross}
           alt="Cross in the sky"
           style={{
-            marginRight: "80px",
             borderRadius: "10px",
             height: "250px",
           }}
         />
-        <ol style={boxStyles}>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "flex-start",
+            justifyContent: "center",
+            height: { xs: "auto", md: "100%" },
+            width: { xs: "70%", sm: "50%", md: "100%" },
+            marginLeft: { xs: "0px", md: "50px" },
+            marginTop: { xs: "25px", md: "0" },
+          }}
+        >
           <li
             style={{
               textAlign: "left",
@@ -100,7 +106,7 @@ const Missions = (props) => {
               (Promote the obedience of Jesus command in Matthew 28:19-20)
             </span>
           </li>
-        </ol>
+        </Box>
       </Container>
     </Container>
   );
